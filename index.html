@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini App Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+        }
+        h1 { color: #007bff; font-size: 1.5rem; }
+        p { color: #666; }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:active { background-color: #0056b3; }
+        .btn-outline {
+            background-color: white;
+            color: #007bff;
+            border: 1px solid #007bff;
+        }
+        #user-email { font-weight: bold; color: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Привет из Mini App!</h1>
+        <p>Вы вошли как: <br><span id="user-email">загрузка...</span></p>
+        
+        <div style="margin: 20px 0;">
+            <p>Счетчик: <span id="counter">0</span></p>
+            <button class="btn" onclick="increment()">Добавить +1</button>
+        </div>
+
+        <button class="btn btn-outline" onclick="logToAndroid()">Лог в Android Studio</button>
+        <br>
+        <button class="btn btn-outline" style="margin-top: 15px;" onclick="exitApp()">Назад к чатам</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
